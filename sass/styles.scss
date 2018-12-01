@@ -1,3 +1,21 @@
+$size: 200px;
+$width: 20px;
+$color: red;
+
+
 body {
-    background: yellow;
+    padding-top: $size ;
+    margin: $width;
+
+}
+
+p {
+    $size: 20px;
+    margin: $width;
+    padding-top: $size;
+    width: calc(100% - #{$size});
+}
+ 
+.#{$color} {
+    color: $color;
 }
