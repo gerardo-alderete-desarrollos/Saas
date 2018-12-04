@@ -1,59 +1,7 @@
-// Tipos de datos
-// String 
-// Numeros
-// Colores
-// Booleans
-// Maps
-// List
-
-$string: hola;
-$string2: hola;
-$string3: hola;
-$string4: 'hola';
-$numero: 3deg;
-$color: rgb(95,95,95);
-$boolean: true;
-$list: 1px solid red;
-$list2: 1px, solid, red;
-$map: (
-    color: red,
-    font: arial,
-    size: 20px
-
-);
-
-$coloresMap: (
-    primario: blue,
-    secundario: yellow,
-    terciario: purple
-);
+@import "_config.scss";
+@import "menu.scss";
 
 
 body {
-   /*  background: type-of($var);
-    background: type-of($var2);
-    content: quote($var3);
-    content: unquote($var4);
-    background: type-of($numero);
-
-    padding: $numero * 2; */
-
-    // color: type-of($color);
-
-    // background: $color;
-
-    // background: $boolean;
-/* 
-    background: $list;
-    background: $list2; */
-
-/*     background: type-of($map);
-    color: map-get($map, color); */
-    
-    color: map-get($coloresMap, terciario);
-    color: map-get($coloresMap, secundario);
-    color: map-get($coloresMap, primario);
-
-
-
+    background: $color;
 }

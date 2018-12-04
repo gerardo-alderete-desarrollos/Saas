@@ -1,16 +1,7 @@
-body {
-  /*  background: type-of($var);
-    background: type-of($var2);
-    content: quote($var3);
-    content: unquote($var4);
-    background: type-of($numero);
+.menu {
+  display: block;
+  color: red;
+  margin: 0; }
 
-    padding: $numero * 2; */
-  /* 
-    background: $list;
-    background: $list2; */
-  /*     background: type-of($map);
-    color: map-get($map, color); */
-  color: purple;
-  color: yellow;
-  color: blue; }
+body {
+  background: red; }
