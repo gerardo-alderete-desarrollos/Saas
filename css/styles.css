@@ -1,43 +1,16 @@
-ul {
-  margin: 0; }
-  ul li {
-    margin: 0; }
-  ul a {
-    display: block; }
-  ul span {
-    color: red; }
+body {
+  /*  background: type-of($var);
+    background: type-of($var2);
+    content: quote($var3);
+    content: unquote($var4);
+    background: type-of($numero);
 
-ul {
-  margin: 0;
-  display: block;
-  -webkit-animation: menu 1s;
-  animation: menu 1s; }
-  ul:hover {
-    color: green; }
-  ul::before {
-    content: "EDteam"; }
-  @media screen and (min-width: 640px) {
-    ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-
-@-webkit-keyframes menu {
-  to {
-    color: red; } }
-
-@keyframes menu {
-  to {
-    color: red; } }
-
-.menu {
-  display: block;
-  /*   font: {
-        size: 1em;
-        style: italic;
-        family: arial;
-    } */
-  grid-template-columns: 100px 100px;
-  grid-template-rows: auto; }
-  .menu-item {
-    color: red; }
+    padding: $numero * 2; */
+  /* 
+    background: $list;
+    background: $list2; */
+  /*     background: type-of($map);
+    color: map-get($map, color); */
+  color: purple;
+  color: yellow;
+  color: blue; }

@@ -1,68 +1,59 @@
-$size: 200px;
-$width: 20px;
-$color: red;
+// Tipos de datos
+// String 
+// Numeros
+// Colores
+// Booleans
+// Maps
+// List
+
+$string: hola;
+$string2: hola;
+$string3: hola;
+$string4: 'hola';
+$numero: 3deg;
+$color: rgb(95,95,95);
+$boolean: true;
+$list: 1px solid red;
+$list2: 1px, solid, red;
+$map: (
+    color: red,
+    font: arial,
+    size: 20px
+
+);
+
+$coloresMap: (
+    primario: blue,
+    secundario: yellow,
+    terciario: purple
+);
 
 
-ul {
-    margin: 0;
+body {
+   /*  background: type-of($var);
+    background: type-of($var2);
+    content: quote($var3);
+    content: unquote($var4);
+    background: type-of($numero);
 
-    li {
-        margin: 0;
-    }
-     
-    a {
-        display: block;
+    padding: $numero * 2; */
 
-    }
+    // color: type-of($color);
 
-    span {
-        color: red;
-    }
-}
+    // background: $color;
 
-ul {
-    margin: 0;
-    display: block;
-    animation: menu 1s;
+    // background: $boolean;
+/* 
+    background: $list;
+    background: $list2; */
 
-    &:hover{
-        color: green;
-    }
-
-    &::before {
-        content: "EDteam";
-    }
-
-    @media screen and(min-width: 640px){
-        display: flex;
-        
-    }
-
-    @keyframes menu {
-        to {
-            color:red;
-        }
-        
-    }
-   
-}
+/*     background: type-of($map);
+    color: map-get($map, color); */
+    
+    color: map-get($coloresMap, terciario);
+    color: map-get($coloresMap, secundario);
+    color: map-get($coloresMap, primario);
 
 
-.menu {
-    display: block;
 
-    &-item {
-        color: red;
-    }
-
-  /*   font: {
-        size: 1em;
-        style: italic;
-        family: arial;
-    } */
-
-    grid-template: {
-        columns: 100px 100px;
-        rows: auto;
-    }
 }
