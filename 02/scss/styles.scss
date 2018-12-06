@@ -1,25 +1,29 @@
-// @extend
+//Condicionales
 
-%button {
-    display: inline-block;
-    margin: 1em 0;
-    padding: .5em 1.5em;
-}
+$dev: false !default;
 
-.button {
-    @extend  %button;
-}
+// $dev: true;
 
-.button-alert {
-    @extend %button;
-    background: red;
-    color: #fff;
-}
+// @if $dev {
+//     * {
+//         outline: 1px solid red;
+//     }
+// } @else if 3 < 5 and 1 == 1 or  2 == 2 {
+//     * {
+//         display: block;
+//     }
+// }@else {
+//     * {
+//         color: green;
+//     }
+// }
 
-.button:hover {
-    transform: translateY(-5px);
-}
 
-.button.active {
-    @extend .button:hover;
-}
+// Importaciones
+$buttons: true !default;
+$colors: true !default;
+
+$buttons: false;
+
+@import "buttons";
+@import "colors";

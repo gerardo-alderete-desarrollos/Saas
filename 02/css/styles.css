@@ -1,13 +1,2 @@
-.button, .button-alert {
-  display: inline-block;
-  margin: 1em 0;
-  padding: .5em 1.5em; }
-
-.button-alert {
-  background: red;
-  color: #fff; }
-
-.button:hover, .button.active {
-  -webkit-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  transform: translateY(-5px); }
+.primary {
+  background: blue; }
