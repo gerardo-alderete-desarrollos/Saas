@@ -1,29 +1,9 @@
-//Condicionales
+//Iteraciones
 
-$dev: false !default;
-
-// $dev: true;
-
-// @if $dev {
-//     * {
-//         outline: 1px solid red;
-//     }
-// } @else if 3 < 5 and 1 == 1 or  2 == 2 {
-//     * {
-//         display: block;
-//     }
-// }@else {
-//     * {
-//         color: green;
-//     }
-// }
-
-
-// Importaciones
-$buttons: true !default;
-$colors: true !default;
-
-$buttons: false;
-
-@import "buttons";
-@import "colors";
+@for $i from 1 through 20 {
+   @if $i % 2 == 0 {
+        .column-#{$i * 5} {
+            width: $i * 5%;
+        }
+   }
+}
