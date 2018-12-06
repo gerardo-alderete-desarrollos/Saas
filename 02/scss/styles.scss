@@ -1,37 +1,45 @@
-//Iteraciones
 
-$colors: red, green, blue;
+// CODIGO PARA HACER DEGRADADO COLORES
+// $colors: hsl(0,100,50);
+// @for $i from 0 through 360 {
+//     body {
+//         $colors: append($colors, hsl($i, 100, 50), comma);
+//    }
+   
+// }
 
-@each $color in $colors {
-    .button-#{$color}{
-        color: $color;
-    }
+// body {
+//     margin: 0;
+//     background: linear-gradient($colors);
+//     min-height: 100vh;
+// }
+
+// CODIGO PARA HACER DEGRADADO EN LA ESCALA DE GRISES
+// $colors: hsl(0,0,0);
+// @for $i from 1 through 100 {
+//     body {
+//         $colors: append($colors, hsl(0, 0, $i), comma);
+//    }
+   
+// }
+
+// body {
+//     margin: 0;
+//     // background: linear-gradient($colors);
+//     background: linear-gradient(to top,$colors);
+//     min-height: 100vh;
+// }    
+// CODIGO PARA HACER DEGRADADO CIRCULAR
+$colors: hsl(0,0,0);
+@for $i from 1 through 100 {
+        $colors: append($colors, hsl(0, 0, $i), comma);
+   
 }
 
-$colors: (
-    primary: red,
-    secondary: green,
-    tertiary: blue
-);
-
-@each $key, $value in $colors {
-    .button-#{$key} {
-        background: #{$value};
-    }
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, $colors);
+    min-height: 100vh;
 }
 
-$breackpoints: (
-    small: 360px,
-    medium: 640px,
-    large: 1024px,
-    xlarge: 1400px
-);
 
-$i : 0 !default;
-@each $key, $value in $colors {
-    
-    $i : $i + 1em;
-    .button-#{$key}{
-        size: $i;
-    }
-}
