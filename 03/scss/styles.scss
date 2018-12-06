@@ -2,10 +2,15 @@
 @import "mixins/mixins";
 
 
-.menu {
-    @include menu(inline){
-        color: green;
-    };
-
-    
+body {
+    background: red;
+    @include mq(small){
+        background: green;
+    }
+    @include mq(large){
+        background: yellow;
+    }
+    @include mq(100px){
+        background: yellow;
+    }
 }
