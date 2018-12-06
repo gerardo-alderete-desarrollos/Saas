@@ -1,0 +1,6 @@
+@import "config/_variables";
+@import "mixins/mixins";
+
+.button {
+    @include button;
+}
