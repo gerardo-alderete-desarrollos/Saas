@@ -1,1 +1,8 @@
 $buttons: true !default;
+$buttons-colors: (
+    primary: blue,
+    secondary: yellow,
+    alert: red,
+    cta: purple,
+    error: pink
+);

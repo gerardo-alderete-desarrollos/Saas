@@ -1,18 +1,6 @@
 @import "config/_variables";
 @import "mixins/mixins";
 
-.button {
-    @include button(red);
-}
 
-.menu {
-    @include menu('.item', '.link');
-}
 
-.menu2 {
-    @include menu(li, a);
-}
-
-.menu-defecto {
-    @include menu(li, a);
-}
+@include button(map-keys($buttons-colors)...);
