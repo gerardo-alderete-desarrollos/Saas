@@ -1,14 +1,6 @@
-.button {
-  display: inline-block;
-  margin: 1em;
-  color: blue; }
-  .button a {
-    text-decoration: none; }
-  .button.secondary {
-    color: yellow; }
-  .button.alert {
-    color: red; }
-  .button.cta {
-    color: purple; }
-  .button.error {
-    color: pink; }
+.menu {
+  color: red;
+  display: inline; }
+  @media screen and (min-width: 1024px) {
+    .menu {
+      color: green; } }

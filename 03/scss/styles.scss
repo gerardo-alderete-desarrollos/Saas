@@ -2,5 +2,10 @@
 @import "mixins/mixins";
 
 
+.menu {
+    @include menu(inline){
+        color: green;
+    };
 
-@include button(map-keys($buttons-colors)...);
+    
+}

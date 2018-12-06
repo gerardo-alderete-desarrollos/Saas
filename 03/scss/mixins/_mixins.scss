@@ -1,26 +1,9 @@
-@mixin button($colors...) {
-    @if $buttons {
-        .button{
-            display: inline-block;
-            margin: 1em; 
-            color: map-get($buttons-colors,nth($colors,1)); 
-            
-            a {
-                text-decoration: none;
-            }
-            
-            @if (length($colors) > 1 ){
-                @for $i from 2 to length($colors) + 1 {
-                    &.#{nth($colors, $i)}{
-                        color: map-get($buttons-colors,nth($colors,$i));
-                    }
-                }
-            }
+@mixin menu ($display){
+    color: red;
+    display: $display;
 
-        }
-
-        
+    @media screen and (min-width:1024px) {
+        @content;
     }
-    
-    
+
 }
