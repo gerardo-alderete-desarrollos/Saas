@@ -1,6 +1,25 @@
-@import "components/base";
-@import "components/buttons";
+// @extend
 
-body{
-    display: block;
+%button {
+    display: inline-block;
+    margin: 1em 0;
+    padding: .5em 1.5em;
+}
+
+.button {
+    @extend  %button;
+}
+
+.button-alert {
+    @extend %button;
+    background: red;
+    color: #fff;
+}
+
+.button:hover {
+    transform: translateY(-5px);
+}
+
+.button.active {
+    @extend .button:hover;
 }
