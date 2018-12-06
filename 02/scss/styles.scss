@@ -1,9 +1,37 @@
 //Iteraciones
 
-@for $i from 1 through 20 {
-   @if $i % 2 == 0 {
-        .column-#{$i * 5} {
-            width: $i * 5%;
-        }
-   }
+$colors: red, green, blue;
+
+@each $color in $colors {
+    .button-#{$color}{
+        color: $color;
+    }
+}
+
+$colors: (
+    primary: red,
+    secondary: green,
+    tertiary: blue
+);
+
+@each $key, $value in $colors {
+    .button-#{$key} {
+        background: #{$value};
+    }
+}
+
+$breackpoints: (
+    small: 360px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1400px
+);
+
+$i : 0 !default;
+@each $key, $value in $colors {
+    
+    $i : $i + 1em;
+    .button-#{$key}{
+        size: $i;
+    }
 }
