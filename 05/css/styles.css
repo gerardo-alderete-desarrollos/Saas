@@ -1,5 +1,36 @@
-body {
-  background: #17c892; }
+/* 
+    FUNCIONES SAAS PARA COLOR
+
+    RGB
+        red($color)
+        green($color)
+        blue($blue)
+
+    HSL
+        hue($color)
+        saturation($color)
+        lightness($color)
+
+        darken($color,cantidad-a-oscurecer)
+        lighten($color,cantidad-a-oscurecer)
+        saturate($color,cantidad-a-oscurecer)
+        dsaturate($color,cantidad-a-oscurecer)
+        saturate($color,cantidad-a-oscurecer)
+        adjust-hue($color,cantidad)
+
+
+*/
+button {
+  display: inline-block;
+  border: none;
+  padding: .5em 1.5em;
+  background: yellow; }
 
 body {
-  background: #80f20d; }
+  /* background: hsl(60,90,50);
+        red: red(hsl(60,90,50)); */
+  /*    h: hue($color);
+        s: saturation($color);
+        l: lightness($color); */
+  /* background: $base-color;
+        color: color-text(); */ }

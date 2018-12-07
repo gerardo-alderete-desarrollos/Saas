@@ -24,9 +24,70 @@
         // 240 = BLUE
         // 300 = MAGENTA
 
+/* 
+    FUNCIONES SAAS PARA COLOR
+
+    RGB
+        red($color)
+        green($color)
+        blue($blue)
+
+    HSL
+        hue($color)
+        saturation($color)
+        lightness($color)
+
+        darken($color,cantidad-a-oscurecer)
+        lighten($color,cantidad-a-oscurecer)
+        saturate($color,cantidad-a-oscurecer)
+        dsaturate($color,cantidad-a-oscurecer)
+        saturate($color,cantidad-a-oscurecer)
+        adjust-hue($color,cantidad)
+
+
+*/
+
+    // $color: #33AA65;
+
+    $base-color: hsl(200,100%,51%);
+    $text-color-light: #fff;
+    $text-color-dark: #222;
+
+
+   @function color-text(){
+       @if lightness($base-color) > 50 {
+           @return $text-color-dark;
+       }@else {
+            @return $text-color-light;
+       }
+   }
+
+   @mixin button($color) {
+       display: inline-block;
+       border: none;
+       padding: .5em 1.5em;
+       background: $color;
+       
+   }
+
+   button {
+       @include button(yellow);
+   }
+
     body {
-        // background: rgb(23,200,146);
-        background: hsl(90,90%,50%);
+        /* background: hsl(60,90,50);
+        red: red(hsl(60,90,50)); */
+     /*    h: hue($color);
+        s: saturation($color);
+        l: lightness($color); */
+        /* background: $base-color;
+        color: color-text(); */
+
+        $color: red;
+        // background: darken($color, 10);
+        // background: lighten($color, 10);
+        // background: desaturate($color, 80);
+        // background: adjust-hue($color, 60);
     }
     
     
