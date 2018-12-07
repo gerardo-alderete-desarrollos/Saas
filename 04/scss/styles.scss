@@ -1,0 +1,12 @@
+@function double($number) {
+    @if type-of($number) == number{
+        @return $number * 2;
+    }
+    @return null
+    
+}
+
+body {
+    font-size: double(asdf);
+}
+
