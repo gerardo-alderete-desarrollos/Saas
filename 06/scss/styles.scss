@@ -1,22 +1,43 @@
 /*  
-    OPCIONES DE COMPILACION
-    --output-style= expanded | compressed | nested | compact
-    --source-comments
-    --source-map=true
+    DEBUGGIN CON 
+    @debug
+    @warn
+    @error
 
 
 */
 
 
-body {
-    color: red;
-    background: blue;
-    p{
-        display: inline;
+// @import "base/base";
 
-    }
+$size: 1em;
+$colors: yellow green blue;
+
+
+@mixin button {
+    color:red;
+    @warn 'El mixin button desaparecera en la proxima version por favor use button-new en su lugar';
+    
 }
 
-p{
-    color: green;
+@mixin button-new($color) {
+    @if type-of($color) == color {
+        color: green;
+    }@else {
+        @error 'El parametro #{$color} no es valido . use un tipo de dato color';
+    }
+    
+}
+body {
+    // @debug type-of($size);
+    // @debug $size;
+    // @debug $colors;
+    // @debug type-of($colors);
+
+    // @warn 'Hola mundo';
+}
+
+.button {
+    // @include button();
+    @include button-new('hola mundo');
 }

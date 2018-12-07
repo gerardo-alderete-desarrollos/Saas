@@ -1,16 +1,12 @@
 /*  
-    OPCIONES DE COMPILACION
-    --output-style= expanded | compressed | nested | compact
-    --source-comments
+    DEBUGGIN CON 
+    @debug
+    @warn
+    @error
+
 
 */
-body {
-  color: red;
-  background: blue; }
-  body p {
-    display: inline; }
-
-p {
+.button {
   color: green; }
 
 /*# sourceMappingURL=styles.css.map */
