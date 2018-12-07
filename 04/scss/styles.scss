@@ -2,44 +2,37 @@
 @import 'config/functions';
 
 /* 
-    Funciones de mapas y listas
+    Funciones de introspeccion
 
-    nth($list,n)
-    index($list, $value)
-    join($list1, $list2, $list3, separador: space | comma)
-    append($list, $value,$separador:space | comma)
+    inspect() es similar a un console.log() en javascript
+    type-of() devuelve el tipo de dato
+    unit() devuelve la unidad de un numero como string
+    unitless() devuelve un boolean(true) si el numero no tiene unidad
+    mixin-exists($mixin) para evaluar si un mixin existe
+    function-exists(function)
+    variable-exists(variable)
+    global-variable-exist(variable)
 
-    map-get($map, $key)
-    map-keys($map)   devuelve los keys de un mapa
-    map-values($map)    devuelve los valores de un map 
-    map-has-key($map, $key) devuelve true o false si un key existe o no en un mapa
-    map-merge($map1,$map2) une dos mapas
-
+   
 */
-$border : 1px solid red;
-$border2 : 1px dotted green;
-$color: red;
-
-$colors : (
-    primary: green,
-    secondary: red,
-    tertirary: blue
-);
-
-@function color($color-key) {
-    @if map-has-key($colors, $color-key){
-        @return map-get($colors, $color-key);
-    }
-
-    @return null;
+@mixin button {
+    color: red;
 }
 
+
+@if mixin-exists(button) {
+    body {
+        background: red;
+    }
+}
+
+$colors: (
+    primary: yellow,
+    secondary: red
+);
+
 body {
-    border: nth($border, 3);
-    border: index($border, solid);
-    border-color: join($border, $border2, comma);
-    border: append(1px solid, $color ); 
-
-    border-color: color(secondary);
-
+    color: inspect($colors);
+    color: unit(10px);
+    color: unit(10);
 }
