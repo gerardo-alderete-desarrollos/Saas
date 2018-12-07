@@ -1,21 +1,6 @@
-/* 
-    Funciones de introspeccion
-
-    inspect() es similar a un console.log() en javascript
-    type-of() devuelve el tipo de dato
-    unit() devuelve la unidad de un numero como string
-    unitless() devuelve un boolean(true) si el numero no tiene unidad
-    mixin-exists($mixin) para evaluar si un mixin existe
-    function-exists(function)
-    variable-exists(variable)
-    global-variable-exist(variable)
-
-   
-*/
 body {
   background: red; }
 
-body {
-  color: (primary: yellow, secondary: red);
-  color: "px";
-  color: ""; }
+.text {
+  text-shadow: 1px 1px #8f0000, 2px 2px #8f0000, 3px 3px #8f0000, 4px 4px #8f0000, 5px 5px #8f0000, 6px 6px #8f0000, 7px 7px #8f0000, 8px 8px #8f0000, 9px 9px #8f0000, 10px 10px #8f0000;
+  font-size: 6em; }

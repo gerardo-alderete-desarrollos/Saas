@@ -1,38 +1,11 @@
 @import 'config/variables';
 @import 'config/functions';
 
-/* 
-    Funciones de introspeccion
-
-    inspect() es similar a un console.log() en javascript
-    type-of() devuelve el tipo de dato
-    unit() devuelve la unidad de un numero como string
-    unitless() devuelve un boolean(true) si el numero no tiene unidad
-    mixin-exists($mixin) para evaluar si un mixin existe
-    function-exists(function)
-    variable-exists(variable)
-    global-variable-exist(variable)
-
-   
-*/
-@mixin button {
-    color: red;
-}
-
-
-@if mixin-exists(button) {
-    body {
-        background: red;
-    }
-}
-
-$colors: (
-    primary: yellow,
-    secondary: red
-);
-
 body {
-    color: inspect($colors);
-    color: unit(10px);
-    color: unit(10);
+    background: red;
+}
+
+.text {
+    text-shadow: long-shadow(10, darken(red,22));
+    font-size: 6em;
 }
