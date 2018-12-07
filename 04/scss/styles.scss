@@ -1,7 +1,31 @@
-@import 'config/functions';
 @import 'config/variables';
+@import 'config/functions';
 
 body {
     font-size: em(20px);
-    background: image('imagen');
+    background: image('image.jpg');
 }
+
+/* 
+    Funciones de strings
+    quote($string) agrega comillas
+    unquote($string) quita comillas
+    str-length($string) devuelve cantidad de caracteres
+    str-index($string, $value) devuelve el indice de un caracter en un string
+
+*/
+
+$width : 1px;
+$style: solid;
+$color: red;
+
+body {
+    border: unquote($width + ' ' + $style + ' ' + $color);
+    &::before {
+        content: quote($style);
+    }
+
+    index: str-index($style, 'i');
+    index: str-length($style);
+}
+

@@ -1,3 +1,18 @@
 body {
   font-size: 1.25em;
-  background: image("imagen"); }
+  background: image("image.jpg"); }
+
+/* 
+    Funciones de strings
+    quote($string) agrega comillas
+    unquote($string) quita comillas
+    str-length($string) devuelve cantidad de caracteres
+    str-index($string, $value) devuelve el indice de un caracter en un string
+
+*/
+body {
+  border: 1px solid red;
+  index: 4;
+  index: 5; }
+  body::before {
+    content: "solid"; }
