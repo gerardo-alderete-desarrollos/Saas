@@ -1,0 +1,20 @@
+/*  
+    OPCIONES DE COMPILACION
+    --output-style= expanded | compressed | nested | compact
+    --source-comments
+
+*/
+/* line 9, scss/styles.scss */
+body {
+  color: red;
+}
+
+/* line 11, scss/styles.scss */
+body p {
+  display: inline;
+}
+
+/* line 17, scss/styles.scss */
+p {
+  color: green;
+}
