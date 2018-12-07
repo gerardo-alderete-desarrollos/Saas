@@ -2,12 +2,15 @@
     OPCIONES DE COMPILACION
     --output-style= expanded | compressed | nested | compact
     --source-comments
+    --source-map=true
+
 
 */
 
 
 body {
     color: red;
+    background: blue;
     p{
         display: inline;
 

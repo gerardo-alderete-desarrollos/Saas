@@ -4,17 +4,13 @@
     --source-comments
 
 */
-/* line 9, scss/styles.scss */
 body {
   color: red;
-}
+  background: blue; }
+  body p {
+    display: inline; }
 
-/* line 11, scss/styles.scss */
-body p {
-  display: inline;
-}
-
-/* line 17, scss/styles.scss */
 p {
-  color: green;
-}
+  color: green; }
+
+/*# sourceMappingURL=styles.css.map */
