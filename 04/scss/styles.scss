@@ -1,12 +1,7 @@
-@function double($number) {
-    @if type-of($number) == number{
-        @return $number * 2;
-    }
-    @return null
-    
-}
+@import 'config/functions';
+@import 'config/variables';
 
 body {
-    font-size: double(asdf);
+    font-size: em(20px);
+    background: image('imagen');
 }
-
