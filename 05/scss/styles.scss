@@ -1,0 +1,18 @@
+@import 'config/variables';
+@import 'config/functions';
+
+// Color sustractivo (pintura, par imprenta)
+    // cyan, magenta, amarillo, black modo de color (CMYK)
+// Color aditivo (luz, para pantalla)
+    // red, green , blue ( RGB )
+    // 255  255     255 == 2**8,2**8,2**8,2**8 = 16Millones de colores = Profundidad de color de 24bits
+    // 23,200,146
+
+
+    body {
+        background: rgb(23,200,146);
+    }
+    
+    
+    
+    
