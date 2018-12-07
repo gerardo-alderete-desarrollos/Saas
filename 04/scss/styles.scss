@@ -2,34 +2,44 @@
 @import 'config/functions';
 
 /* 
-    Funciones de números
+    Funciones de mapas y listas
 
-    percentage($numero)
-    max($number1,$number2,$number3)
-    floor($numero) redondea hacia abajao
-    ceil($numero) redondea hacia arriaba
-    round($numero) redonde al que este mas cercano
-    random($numero) numero aleatorio
+    nth($list,n)
+    index($list, $value)
+    join($list1, $list2, $list3, separador: space | comma)
+    append($list, $value,$separador:space | comma)
+
+    map-get($map, $key)
+    map-keys($map)   devuelve los keys de un mapa
+    map-values($map)    devuelve los valores de un map 
+    map-has-key($map, $key) devuelve true o false si un key existe o no en un mapa
+    map-merge($map1,$map2) une dos mapas
 
 */
-// @function columns($columns, $total-columns){
-//     @return percentage( $columns / $total-columns );
+$border : 1px solid red;
+$border2 : 1px dotted green;
+$color: red;
 
-// }
+$colors : (
+    primary: green,
+    secondary: red,
+    tertirary: blue
+);
 
-// @for $i from 1 through 12 {
-//     .cols-#{$i} {
-//         width: columns($i,12);
-//     }
-// }
+@function color($color-key) {
+    @if map-has-key($colors, $color-key){
+        @return map-get($colors, $color-key);
+    }
 
-// .cols-4 {
-//     width: columns(4, 12);
-// }
+    @return null;
+}
 
 body {
-    width: percentage(1);
-    width: max(100%,50%,99%);
-    width: floor(54.3);
-    width: random(15)
+    border: nth($border, 3);
+    border: index($border, solid);
+    border-color: join($border, $border2, comma);
+    border: append(1px solid, $color ); 
+
+    border-color: color(secondary);
+
 }

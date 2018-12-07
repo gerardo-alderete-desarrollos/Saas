@@ -1,17 +1,21 @@
-@charset "UTF-8";
 /* 
-    Funciones de números
+    Funciones de mapas y listas
 
-    percentage($numero)
-    max($number1,$number2,$number3)
-    floor($numero) redondea hacia abajao
-    ceil($numero) redondea hacia arriaba
-    round($numero) redonde al que este mas cercano
-    random($numero) numero aleatorio
+    nth($list,n)
+    index($list, $value)
+    join($list1, $list2, $list3, separador: space | comma)
+    append($list, $value,$separador:space | comma)
+
+    map-get($map, $key)
+    map-keys($map)   devuelve los keys de un mapa
+    map-values($map)    devuelve los valores de un map 
+    map-has-key($map, $key) devuelve true o false si un key existe o no en un mapa
+    map-merge($map1,$map2) une dos mapas
 
 */
 body {
-  width: 100%;
-  width: 100%;
-  width: 54;
-  width: 1; }
+  border: red;
+  border: 2;
+  border-color: 1px, solid, red, 1px, dotted, green;
+  border: 1px solid red;
+  border-color: red; }
