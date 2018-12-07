@@ -7,10 +7,14 @@
     // red, green , blue ( RGB )
     // 255  255     255 == 2**8,2**8,2**8,2**8 = 16Millones de colores = Profundidad de color de 24bits
     // 23,200,146
-
+    // hue, saturation, lighten (HSL)
+    // hue => tono de color( de 0 a 360)
+    // saturation => intensidad del color, de gris al color puro de (0% a 100%) 100% es el color puro
+    // lighten => cantidad de luz de (0% da negro a 100% da blanco) el color puro esta en 50%
 
     body {
-        background: rgb(23,200,146);
+        // background: rgb(23,200,146);
+        background: hsl(300,90%,50%);
     }
     
     
