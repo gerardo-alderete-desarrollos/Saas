@@ -1,43 +1,20 @@
-/*  
-    DEBUGGIN CON 
-    @debug
-    @warn
-    @error
+/* 
+    ESTRUCTURAD DE PROYECTO
 
+    SMACSS
+        base (etiquetas HTML)
+        modulos (componentes reutilizables)
+        layout (geometria y posicion)
+        theme (tipografia y color, identidad visual de la marca)
+        estados (elementos que cambian)
+    ITCSS
+        settings (NO GENERA CSS)
+        tools   (NO GENERA CSS)
+        generic ( es lo mismo que base)
+        elements ( lo mismo que base)
+        objects ( es lo mismo que modulos)
+        components ( es cuando tomas un object y le añades temas)
+        utilities ( son estilos que va a sobreescribir cualquier otro osea hacks)
 
+    7in1
 */
-
-
-// @import "base/base";
-
-$size: 1em;
-$colors: yellow green blue;
-
-
-@mixin button {
-    color:red;
-    @warn 'El mixin button desaparecera en la proxima version por favor use button-new en su lugar';
-    
-}
-
-@mixin button-new($color) {
-    @if type-of($color) == color {
-        color: green;
-    }@else {
-        @error 'El parametro #{$color} no es valido . use un tipo de dato color';
-    }
-    
-}
-body {
-    // @debug type-of($size);
-    // @debug $size;
-    // @debug $colors;
-    // @debug type-of($colors);
-
-    // @warn 'Hola mundo';
-}
-
-.button {
-    // @include button();
-    @include button-new('hola mundo');
-}

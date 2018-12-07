@@ -1,12 +1,23 @@
-/*  
-    DEBUGGIN CON 
-    @debug
-    @warn
-    @error
+@charset "UTF-8";
+/* 
+    ESTRUCTURAD DE PROYECTO
 
+    SMACSS
+        base (etiquetas HTML)
+        modulos (componentes reutilizables)
+        layout (geometria y posicion)
+        theme (tipografia y color, identidad visual de la marca)
+        estados (elementos que cambian)
+    ITCSS
+        settings (NO GENERA CSS)
+        tools   (NO GENERA CSS)
+        generic ( es lo mismo que base)
+        elements ( lo mismo que base)
+        objects ( es lo mismo que modulos)
+        components ( es cuando tomas un object y le añades temas)
+        utilities ( son estilos que va a sobreescribir cualquier otro osea hacks)
 
+    7in1
 */
-.button {
-  color: green; }
 
 /*# sourceMappingURL=styles.css.map */
