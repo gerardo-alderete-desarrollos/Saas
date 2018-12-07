@@ -1,31 +1,35 @@
 @import 'config/variables';
 @import 'config/functions';
 
-body {
-    font-size: em(20px);
-    background: image('image.jpg');
-}
-
 /* 
-    Funciones de strings
-    quote($string) agrega comillas
-    unquote($string) quita comillas
-    str-length($string) devuelve cantidad de caracteres
-    str-index($string, $value) devuelve el indice de un caracter en un string
+    Funciones de números
+
+    percentage($numero)
+    max($number1,$number2,$number3)
+    floor($numero) redondea hacia abajao
+    ceil($numero) redondea hacia arriaba
+    round($numero) redonde al que este mas cercano
+    random($numero) numero aleatorio
 
 */
+// @function columns($columns, $total-columns){
+//     @return percentage( $columns / $total-columns );
 
-$width : 1px;
-$style: solid;
-$color: red;
+// }
+
+// @for $i from 1 through 12 {
+//     .cols-#{$i} {
+//         width: columns($i,12);
+//     }
+// }
+
+// .cols-4 {
+//     width: columns(4, 12);
+// }
 
 body {
-    border: unquote($width + ' ' + $style + ' ' + $color);
-    &::before {
-        content: quote($style);
-    }
-
-    index: str-index($style, 'i');
-    index: str-length($style);
+    width: percentage(1);
+    width: max(100%,50%,99%);
+    width: floor(54.3);
+    width: random(15)
 }
-
